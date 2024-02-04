@@ -85,7 +85,7 @@
     <div class="card">
   <img src="./images/8.jpg" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">Sport Bra</h5>
+    <h5 class="card-title">Sport Wear</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <a href="#" class="btn btn-info">Add to cart</a>
     <a href="#" class="btn btn-secondary">View more</a>
@@ -116,7 +116,7 @@
     </div>
     <div class="col-md-4 mb-2">
     <div class="card">
-  <img src="./images/6.jpg" class="card-img-top" alt="...">
+  <img src="./images/1.jpg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Barmoda</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -151,18 +151,38 @@
     </div>
     </div>
     </div>
-    <div class="col-md-2">
     <!-- Side nav -->
-    
+    <div class="col-md-2 bg-secondary p-0">
+    <ul class="navbar-nav me-auto text-center">
+    <li class="nav-item bg-info">
+      <a href="" class="nav-link text-light"><h4>Delivery Brands</h4></a>
+    </li>
+    <li class="nav-item">
+      <a href="" class="nav-link text-light">Brand 1</a>
+    </li>
+    <li class="nav-item">
+      <a href="" class="nav-link text-light">Brand 2</a>
+    </li>
+    <li class="nav-item">
+      <a href="" class="nav-link text-light">Brand 3</a>
+    </li>
+    <li class="nav-item">
+      <a href="" class="nav-link text-light">Brand 4</a>
+    </li>
+    <li class="nav-item">
+      <a href="" class="nav-link text-light">Brand 5</a>
+    </li>
 
+
+    </ul>
      </div>
     </div>
     
         
-    <!-- Last child
+    <!-- Last child -->
 <div class="bg-info p-3 text-center">
     <p>All rights reserved @-Samdata infotech-2024</P>
-</div>-->
+</div>
 
     </div>
     <!-- bootstrap JS link -->
