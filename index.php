@@ -72,7 +72,7 @@
 
 <!-- Third child -->
 <div class="bg-light">
-    <h3 class="text-center">Gouria Ledies Wear</h3>
+    <h3 class="text-center">Gouria Ladies Wear</h3>
     <p class="text-center">We know your choice</p>
 </div>
 
@@ -153,6 +153,7 @@
     </div>
     <!-- Side nav -->
     <div class="col-md-2 bg-secondary p-0">
+      <!-- Brands to Displayed-->
     <ul class="navbar-nav me-auto text-center">
     <li class="nav-item bg-info">
       <a href="" class="nav-link text-light"><h4>Delivery Brands</h4></a>
@@ -171,6 +172,27 @@
     </li>
     <li class="nav-item">
       <a href="" class="nav-link text-light">Brand 5</a>
+    </li>
+    </ul>
+        <!-- Categories to Displayed-->
+    <ul class="navbar-nav me-auto text-center">
+    <li class="nav-item bg-info">
+      <a href="" class="nav-link text-light"><h4>Categories</h4></a>
+    </li>
+    <li class="nav-item">
+      <a href="" class="nav-link text-light">Categories 1</a>
+    </li>
+    <li class="nav-item">
+      <a href="" class="nav-link text-light">Categories 2</a>
+    </li>
+    <li class="nav-item">
+      <a href="" class="nav-link text-light">Categories 3</a>
+    </li>
+    <li class="nav-item">
+      <a href="" class="nav-link text-light">Categories 4</a>
+    </li>
+    <li class="nav-item">
+      <a href="" class="nav-link text-light">Categories 5</a>
     </li>
 
 
