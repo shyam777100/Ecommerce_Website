@@ -173,6 +173,7 @@
     <li class="nav-item">
       <a href="" class="nav-link text-light">Brand 5</a>
     </li>
+    
     </ul>
         <!-- Categories to Displayed-->
     <ul class="navbar-nav me-auto text-center">
