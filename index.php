@@ -1,13 +1,6 @@
 <?php
-
-$con=mysqli_connect('localhost', 'root','','Mystore');
-    if($con){
-        echo "";
-    }
-else{
-    die(mysqli_error($con));
-}
-
+include('include/connect.php');
+include('functions/common_function.php');
 ?>
 
 <!DOCTYPE html>
@@ -96,89 +89,9 @@ else{
 
     <!-- Fetching gproducts -->
     <?php
-  $select_query="Select * from `products` order by rand() limit 0,9";
-  $result_query=mysqli_query($con,$select_query);
-  //$row=mysqli_fetch_assoc($result_query);
-  //echo $row['product_title'];
-  while($row=mysqli_fetch_assoc($result_query)){
-    $product_id=$row['product_id'];
-    $product_title=$row['product_title'];
-    $product_description=$row['product_description'];
-    $product_image1=$row['product_image1'];
-    $product_price=$row['product_price'];
-    $category_id=$row['category_id'];
-    $brand_id=$row['brand_id'];
-    echo "<div class='col-md-4 mb-2'>
-    <div class='card'>
-  <img src='./admin_area/product_images/$product_image1' class='card-img-top' alt='$product_title'>
-  <div class='card-body'>
-    <h5 class='card-title'>$product_title</h5>
-    <p class='card-text'>$product_description</p>
-    <a href='#' class='btn btn-info'>Add to cart</a>
-    <a href='#' class='btn btn-secondary'>View more</a>
-  </div>
-</div>
-    </div>";
-  }
+    // calling functions
+  getproducts();
     ?>
-
-    
-    <!-- 
-    <div class="col-md-4 mb-2">
-    <div class="card">
-  <img src="./images/4.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">feel loose</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-info">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div>
-    </div>
-    <div class="col-md-4 mb-2">
-    <div class="card">
-  <img src="./images/5.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Loose Tess</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-info">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div>
-    </div>
-    <div class="col-md-4 mb-2">
-    <div class="card">
-  <img src="./images/1.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Barmoda</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-info">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div>
-    </div>
-    <div class="col-md-4 mb-2">
-    <div class="card">
-  <img src="./images/7.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Jeans</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-info">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div>
-    </div>
-    <div class="col-md-4 mb-2">
-    <div class="card">
-  <img src="./images/8.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Lower</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-info">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>  
-  </div>
-    </div>Fourth child -->
     </div>
     </div>
     <!-- Side nav -->
@@ -189,32 +102,9 @@ else{
       <a href="" class="nav-link text-light"><h4>Delivery Brands</h4></a>
     </li>
     <?php
-    $select_brands="Select * from `brands`";
-    $result_brands=mysqli_query($con,$select_brands);
-    while($row_data=mysqli_fetch_assoc($result_brands)){
-      $brand_title=$row_data['brand_title'];
-      $brand_id=$row_data['brand_id'];
-      echo "<li class='nav-item'><a href='index.php?brand=$brand_id' class='nav-link text-light'>$brand_title</a></li>";
-    }
+    getbrands();    
     ?>
-    
-    <!-- Brands to Displayed
-    <li class="nav-item">
-      <a href="" class="nav-link text-light">Brand 1</a>
-    </li>
-    <li class="nav-item">
-      <a href="" class="nav-link text-light">Brand 2</a>
-    </li>
-    <li class="nav-item">
-      <a href="" class="nav-link text-light">Brand 3</a>
-    </li>
-    <li class="nav-item">
-      <a href="" class="nav-link text-light">Brand 4</a>
-    </li>
-    <li class="nav-item">
-      <a href="" class="nav-link text-light">Brand 5</a>
-    </li>-->
-    
+        
     </ul>
         <!-- Categories to Displayed-->
     <ul class="navbar-nav me-auto text-center">
@@ -222,32 +112,9 @@ else{
       <a href="" class="nav-link text-light"><h4>Categories</h4></a>
     </li>
     <?php
-    $select_categories="Select * from `categories`";
-    $result_categories=mysqli_query($con,$select_categories);
-    while($row_data=mysqli_fetch_assoc($result_categories)){
-      $category_title=$row_data['category_title'];
-      $category_id=$row_data['category_id'];
-      echo "<li class='nav-item'><a href='index.php?brand=$category_id' class='nav-link text-light'>$category_title</a></li>";
-    }
+    getcategories();  
     ?>
-    <!-- Categories to Displayed
-    <li class="nav-item">
-      <a href="" class="nav-link text-light">Categories 1</a>
-    </li>
-    <li class="nav-item">
-      <a href="" class="nav-link text-light">Categories 2</a>
-    </li>
-    <li class="nav-item">
-      <a href="" class="nav-link text-light">Categories 3</a>
-    </li>
-    <li class="nav-item">
-      <a href="" class="nav-link text-light">Categories 4</a>
-    </li>
-    <li class="nav-item">
-      <a href="" class="nav-link text-light">Categories 5</a>
-    </li>-->
-
-
+    
     </ul>
      </div>
     </div>
