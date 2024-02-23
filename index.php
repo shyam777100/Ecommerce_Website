@@ -91,6 +91,8 @@ include('functions/common_function.php');
     <?php
     // calling functions
   getproducts();
+  get_unique_categories();
+  get_unique_brands();
     ?>
     </div>
     </div>
