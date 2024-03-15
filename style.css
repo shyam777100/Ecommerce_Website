@@ -15,11 +15,7 @@ box-sizing: border-box;
     height: 200px;
     object-fit: contain;    
 }
-.footer{
-    position: absolute;
-    bottom: 0;
 
-}
 /*.admin_image{
     width: 100px;
     object-fit: contain;
